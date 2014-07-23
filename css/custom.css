@@ -1,5 +1,21 @@
 /* Metronics sidebar, 225px width expanded,  */
-/* Override Metronics sidebar glyph positioning: */
+.sidebar-toggler {
+  background-color: transparent;
+}
+
+.toggler-glyph {
+  color: white;
+  font-size: 75%;
+}
+
+/* Make <a> elements without href property look like normal clicky cursor */
+a {cursor: pointer;}
+
+/* Override Metronics sidebar default toggler positioning. We want to be able to
+ * click the whole .sidebar-toggle menu header to collapse and expand, not just
+ * the glyph. 
+*/
+
 .page-sidebar .sidebar-toggler {
   margin-left: 3px;
   margin-top: 15px;
@@ -9,7 +25,7 @@
   width: 29px;
 }
 
-/* Set the shown and hidden glyphs on expanded sidebar */
+/* Set the shown and hidden glyph when the sidebar is expanded*/
 .page-sidebar .sidebar-toggler .fa-chevron-left {
   display: block; float: right;
 }
@@ -17,7 +33,7 @@
   display: none;
 }
 
-/* Set the shown and hidden glyphs on collapsed sidebar */
+/* Set the shown and hidden glyph when the sidebar is collapsed */
 .page-sidebar-closed .sidebar-toggler .fa-chevron-left {
   display: none;
 }
@@ -26,20 +42,13 @@
   margin-right: 2px; /* fix 1px overflow :) */
 }
 
-/* Sliding chevron hint on expanded toggler hover */
+/* Slide the left chevron when you hover the expanded toggler, to hint that
+ * clicking collapses this element */
 .page-sidebar .sidebar-toggler .fa-chevron-left {
-  transition-property: margin-right;
-  transition-duration: 100ms;
+  transition-property: all; /* margin-right; hover color */
+  transition-duration: 120ms;
+  transition-timing-function: ease-out;
 }
 .page-sidebar .sidebar-toggler:hover .fa-chevron-left {
   margin-right: 190px;
-}
-
-.sidebar-toggler {
-	background-color: transparent;
-}
-
-.toggler-glyph {
-	color: white;
-	font-size: 75%;
 }

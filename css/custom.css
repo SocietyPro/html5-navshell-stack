@@ -52,3 +52,8 @@ a {cursor: pointer;}
 .page-sidebar .sidebar-toggler:hover .fa-chevron-left {
   margin-right: 190px;
 }
+
+/* overriding default.css theme for li.open */
+ul.page-sidebar-menu > li.open > a {
+  background: #e02222;
+}

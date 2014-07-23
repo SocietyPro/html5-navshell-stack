@@ -1,3 +1,40 @@
+/* Metronics sidebar, 225px width expanded,  */
+/* Override Metronics sidebar glyph positioning: */
+.page-sidebar .sidebar-toggler {
+  margin-left: 3px;
+  margin-top: 15px;
+  width: 222px;
+}
+.page-sidebar-closed .page-sidebar .sidebar-toggler{
+  width: 29px;
+}
+
+/* Set the shown and hidden glyphs on expanded sidebar */
+.page-sidebar .sidebar-toggler .fa-chevron-left {
+  display: block; float: right;
+}
+.page-sidebar .sidebar-toggler .fa-chevron-right {
+  display: none;
+}
+
+/* Set the shown and hidden glyphs on collapsed sidebar */
+.page-sidebar-closed .sidebar-toggler .fa-chevron-left {
+  display: none;
+}
+.page-sidebar-closed .sidebar-toggler .fa-chevron-right {
+  display: block;
+  margin-right: 2px; /* fix 1px overflow :) */
+}
+
+/* Sliding chevron hint on expanded toggler hover */
+.page-sidebar .sidebar-toggler .fa-chevron-left {
+  transition-property: margin-right;
+  transition-duration: 100ms;
+}
+.page-sidebar .sidebar-toggler:hover .fa-chevron-left {
+  margin-right: 190px;
+}
+
 .sidebar-toggler {
 	background-color: transparent;
 }
